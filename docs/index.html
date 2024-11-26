@@ -556,7 +556,7 @@
           </figure>
       </div>
   </div> -->
-
+<!-- 
   <section class="section">
     
     <div class="columns is-centered has-text-centered">
@@ -608,33 +608,48 @@
     
 
 </section>
+ -->
 
 
 
-
-
+ 
   <section class="section">
     
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
-          <h2 class="title is-3">Results on various corruptions</h2>
+          <h2 class="title is-3">Gallery of Results</h2>
           <div class="w3-container" id="Gaura-model">
-            <img src="./static/images/gallery.jpg" alt="results gallery" id="fig-gallery" style="width: 100%"/>
-        </div>
+            <img src="./static/images/supp-gallery1-cropped-1.png" alt="results gallery" id="fig-gallery" style="width: 100%"/>
+          </div>
+          <div class="w3-container" id="Gaura-model">
+            <img src="./static/images/supp-gallery2-cropped-1.png" alt="results gallery" id="fig-gallery" style="width: 100%"/>
+            <h2 class="subtitle has-text-centered">
+              We present qualitative results of our text-to-4D generation framework, showcasing superior 
+              visual fidelity, consistent multi-view reconstructions, plausible scene compositions, and 
+              realistic dynamic motions. The horizontal axis represents the time axis and the vertical 
+              axis represents different view points. A comprehensive collection of video demonstrations 
+              is provided in the supplementary materials.
+            </h2>
+          </div>
         </div>
       </div>
       
-
-      
       <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
-            <h2 class="title is-3">Results on Restoring Multiple corruptions</h2>
+            <h2 class="title is-3">Explicit Camera Control</h2>
             <div class="w3-container" id="Gaura-model">
               <!-- <a href="#Gaura-model"><h2><u>GAURA - Model Architecture</u></h2></a> -->
     
-              <img src="./static/images/multi-corr.png" alt="results gallery" id="fig-gallery" style="width: 100%"/>
+              <img src="./static/images/exp-2-cropped-1.png" alt="results gallery" id="fig-gallery" style="width: 100%"/>
               <h2 class="subtitle has-text-centered">
-                Gaura can also restore and render novel views from images corrupted with multiple corruption maintaining view consistency.
+                Camera Control: PaintScene4D demonstrates strong explicit camera control capabilities. 
+                Input text prompt: "A rabbit flying a drone in the middle of mountains." 
+                In contrast, to guide the T2V model, we append camera motion directives such as
+                "The camera tilts to the right" or "The camera moves upwards" to the text prompt. 
+                However, due to implicit handling of camera motion, T2V often fails to generate precise 
+                or controllable camera movements. Our approach, once trained, allows for flexible camera 
+                trajectories within the bounds of the input training cameras, achieving precise and 
+                repeatable control over camera movements for the same scene.
               </h2>
           </div>
           </div>
