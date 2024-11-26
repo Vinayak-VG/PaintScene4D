@@ -246,6 +246,16 @@
           <!-- <a href="#Gaura-model"><h2><u>GAURA - Model Architecture</u></h2></a> -->
           <!-- https://youtu.be/97RZkAOWscU -->
           <img src="./static/images/modelarch-new-cropped-1.png" alt="Model Architecture" id="fig-Gaura-architecture" style="width: 100%"/>
+          <h2 class="subtitle has-text-centered">
+            Method Overview: Our approach consists of three stages. First, we initialize the 4D scene 
+            using a diffusion prior to establish scene content and motion, estimate depth maps for each 
+            video frame, and initialize camera trajectory (extrinsics) and intrinsics for subsequent warping. 
+            In the second stage, we perform sequential warping and inpainting from the first timestamp. 
+            To ensure spatial and temporal coherence, our consistent inpainting module mitigates artifacts 
+            and aligns depth maps, preventing error accumulation. Finally, the generated view-time matrix is 
+            used to renders novel views along user-defined camera trajectories, allowing for explicit camera 
+            control. V0, V1 represent different view points. 
+          </h2>
       </div>
       </div>
     </div>
@@ -307,6 +317,7 @@
     </div>
     <!--/  Degradation-aware Generalizable Novel View Synthesis. -->
 </section>
+
 <!-- 
     <section class="hero is-light is-small">
       <div class="hero-body">
