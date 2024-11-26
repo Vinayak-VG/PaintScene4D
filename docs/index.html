@@ -96,7 +96,7 @@
              
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/Vinayak-VG/GAURA/"
+                <a href="https://github.com/Vinayak-VG/PaintScene4D/"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -189,16 +189,12 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <img src="./static/images/teaserv5_page-0001.jpg" alt="Teaser Figure" id="fig-teaser" style="width: 100%"/>
+      <img src="./static/images/teaser-cropped-1.jpg" alt="Teaser Figure" id="fig-teaser" style="width: 100%"/>
       <h2 class="subtitle has-text-centered">
-        GAURA, can render and restore novel views from degraded input views. Unlike
-        previous attempts at this problem, we demonstrate generalization to different scenes
-        and degradation types. In each example, we visualize the imperfect target capture (on
-        the left) and its corresponding clear rendered view (on the right). Please note that the
-        imperfect view from the target viewing angle is not used as input for our method, and
-        we simply visualize the same for simplicity. GAURA faithfully recovers the underlying
-        3D scene with high geometric accuracy while still managing to generalize across several
-        degradation types
+        4D Text-to-Scene Generation: Unlike prior methods that restrict text-to-4D generation to object-level 
+        reconstruction or text-to-video models lacking explicit camera control, our approach reconstructs a 
+        full 4D scene from a single text prompt. This leads to realistic 4D scenes that can be viewed from 
+        different trajectories.
       </h2>
     </div>
   </div>
@@ -212,11 +208,20 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Neural rendering methods can achieve near-photorealistic image synthesis of scenes from posed input images. However, when the images are imperfect, e.g., captured in very low-light conditions, state-of-the-art methods fail to reconstruct high-quality 3D scenes. 
-          </p>
-          <p>
-            Recent approaches have tried to address this limitation by modeling various degradation processes in the image formation model; however, this limits them to specific image degradations. In this paper, we propose a generalizable neural rendering method that can perform high-fidelity novel view synthesis under several degradations. Our method, GAURA, is learning-based and does not require any test-time scene-specific optimization. It is trained on a synthetic dataset that includes several degradation types.
-GAURA outperforms state-of-the-art methods on several benchmarks for low-light enhancement, dehazing, deraining, and on-par for motion deblurring. Further, our model can be efficiently fine-tuned to any new incoming degradation using minimal data. We thus demonstrate adaptation results on two unseen degradations, desnowing and removing defocus blur.
+            Recent advances in diffusion models have revolutionized 2D and 3D content creation, yet generating 
+            photorealistic dynamic 4D scenes remains a significant challenge. Existing dynamic 4D generation 
+            methods typically rely on distilling knowledge from pre-trained 3D generative models, often fine-tuned 
+            on synthetic object datasets. Consequently, the resulting scenes tend to be object-centric and lack 
+            photorealism. While text-to-video models can generate more realistic scenes with motion, they often 
+            struggle with spatial understanding and provide limited control over camera viewpoints during rendering. 
+            To address these limitations, we present PaintScene4D, a novel text-to-4D scene generation framework 
+            that departs from conventional multi-view generative models in favor of a streamlined architecture 
+            that harnesses video generative models trained on diverse real-world datasets. Our method first generates 
+            a reference video using a video generation model, and then employs a strategic camera array selection for 
+            rendering. We apply a progressive warping and inpainting technique to ensure both spatial and temporal 
+            consistency across multiple viewpoints. Finally, we optimize multi-view images using a dynamic renderer, 
+            enabling flexible camera control based on user preferences. Our PaintScene4D produces realistic 4D scenes 
+            that can be viewed from arbitrary trajectories.
           </p>
         </div>
       </div>
@@ -230,7 +235,7 @@ GAURA outperforms state-of-the-art methods on several benchmarks for low-light e
         <div class="w3-container" id="Gaura-model">
           <!-- <a href="#Gaura-model"><h2><u>GAURA - Model Architecture</u></h2></a> -->
 
-          <img src="./static/images/Model_test_draft.png" alt="Model Architecture" id="fig-Gaura-architecture" style="width: 100%"/>
+          <img src="./static/images/modelarch-new-cropped-1.png" alt="Model Architecture" id="fig-Gaura-architecture" style="width: 100%"/>
       </div>
       </div>
     </div>
